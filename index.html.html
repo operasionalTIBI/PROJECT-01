@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIBI Tours & Travel - Umroh & Haji VIP Amanah, Nyaman, Menuju Baitullah</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        tibi: {
+                            yellow: '#FFD700',
+                            yellowLight: '#FFF9D6',
+                            yellowDark: '#E6C200',
+                            red: '#D91B1B',
+                            redDark: '#A81010',
+                            dark: '#111827',
+                            grayBg: '#F8FAFC',
+                            gold: '#C59B27'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                    boxShadow: {
+                        'glow': '0 0 25px rgba(217, 27, 27, 0.25)',
+                        'card': '0 10px 30px -5px rgba(0, 0, 0, 0.08)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .bg-pattern {
+            background-color: #fdfbf7;
+            background-image: radial-gradient(#d91b1b 0.5px, transparent 0.5px), radial-gradient(#ffd700 0.5px, #fdfbf7 0.5px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+            background-opacity: 0.05;
+        }
+
+        .gradient-banner {
+            background: linear-gradient(135deg, #D91B1B 0%, #A81010 100%);
+        }
+
+        .yellow-badge {
+            background: linear-gradient(135deg, #FFF066 0%, #FFD700 100%);
+        }
+
+        @keyframes pulse-custom {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+
+        .animate-pulse-cta {
+            animation: pulse-custom 2.5s infinite ease-in-out;
+        }
+
+        .logo-ellipse {
+            background-color: #FFE600;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-tibi-grayBg antialiased selection:bg-tibi-yellow selection:text-tibi-red">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-tibi-dark text-white text-xs sm:text-sm py-2 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-2">
+            <div class="flex items-center space-x-2">
+                <span class="bg-tibi-red text-white text-[10px] uppercase font-extrabold px-2 py-0.5 rounded-full">PPIU Resmi</span>
+                <span>PT. Turisina Buana (Izin PPIU No. U.149 Tahun 2021)</span>
+            </div>
+            <div class="flex items-center space-x-4 text-xs">
+                <a href="https://tibitour.com/" target="_blank" class="hover:text-tibi-yellow transition"><i class="fa-solid font-bold fa-globe mr-1"></i> tibitour.com</a>
+                <a href="https://wa.me/6285283337181?text=Halo+Saya+Tertarik+Umrohnya" target="_blank" class="hover:text-tibi-yellow transition"><i class="fa-brands fa-whatsapp mr-1 text-green-400"></i> 0852-8333-7181</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="flex flex-col items-center">
+                    <!-- Logo Badge mimicking physical logo -->
+                    <div class="px-5 py-1.5 bg-[#FFE600] rounded-full border border-yellow-400 shadow-sm flex items-center justify-center">
+                        <span class="font-bold italic text-tibi-red text-xl sm:text-2xl tracking-tight leading-none">tibi tours</span>
+                    </div>
+                    <div class="w-full bg-tibi-red text-white text-[9px] sm:text-[10px] text-center font-bold tracking-widest uppercase mt-0.5 py-0.5 rounded-sm">
+                        tours & travel
+                    </div>
+                </div>
+                <div class="hidden md:block border-l border-gray-300 pl-3">
+                    <p class="text-xs font-serif italic text-tibi-red font-bold">Amanah, Nyaman,</p>
+                    <p class="text-xs font-serif italic text-tibi-gold font-bold">Menuju Baitullah</p>
+                </div>
+            </a>
+
+            <!-- Quick Contacts & Call To Action -->
+            <div class="flex items-center gap-3 sm:gap-4">
+                <div class="hidden lg:flex flex-col items-end text-right">
+                    <span class="text-xs text-gray-500 font-medium">Konsultasi Gratis via WhatsApp</span>
+                    <span class="text-sm font-bold text-gray-900">+62 852-8333-7181</span>
+                </div>
+                <a href="https://wa.me/6285283337181?text=Halo+Saya+Tertarik+Umrohnya" target="_blank" 
+                   class="bg-green-600 hover:bg-green-700 text-white font-bold py-2.5 px-4 sm:px-5 rounded-full shadow-md hover:shadow-lg transition-all duration-300 flex items-center text-xs sm:text-sm gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Hubungi Kami</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 1: ATTENTION (AIDA) -->
+    <section class="relative bg-gradient-to-b from-amber-50/60 via-white to-tibi-grayBg pt-10 pb-16 sm:pt-16 sm:pb-24 overflow-hidden">
+        <!-- Decorative subtle background mosque dome vectors -->
+        <div class="absolute inset-0 opacity-5 pointer-events-none">
+            <div class="absolute right-0 top-10 w-96 h-96 bg-tibi-red rounded-full filter blur-3xl"></div>
+            <div class="absolute left-0 bottom-10 w-96 h-96 bg-tibi-yellow rounded-full filter blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-10 items-center">
+                
+                <!-- Left Column: Copywriting Headlines -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <!-- Trust Pill -->
+                    <div class="inline-flex items-center gap-2 bg-yellow-100 border border-yellow-300 text-yellow-900 text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full shadow-sm">
+                        <i class="fa-solid fa-kaaba text-tibi-red"></i>
+                        <span>Amanah, Nyaman, Menuju Baitullah</span>
+                    </div>
+
+                    <!-- Main Headline -->
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight tracking-tight">
+                        Ibadah Tenang, Tanpa Rasa Cemas. <br class="hidden sm:inline"/>
+                        <span class="text-tibi-red underline decoration-tibi-yellow decoration-4 underline-offset-4">
+                            Nikmati Perjalanan Umroh & Haji VIP
+                        </span> 
+                        yang Aman, Transparan, & Tanpa Biaya Tersembunyi.
+                    </h1>
+
+                    <!-- Sub-headline -->
+                    <p class="text-base sm:text-lg text-gray-600 leading-relaxed font-medium max-w-2xl mx-auto lg:mx-0">
+                        Dirancang khusus untuk para profesional dan keluarga sibuk di Jakarta yang mendambakan perjalanan ibadah eksklusif dengan pendampingan penuh dari keberangkatan hingga pulang.
+                    </p>
+
+                    <!-- Special Offer Banner Badge from Poster -->
+                    <div class="pt-2">
+                        <div class="bg-gradient-to-r from-tibi-red to-red-700 text-white p-5 rounded-2xl shadow-xl border-2 border-yellow-400 relative overflow-hidden inline-block text-left w-full sm:w-auto">
+                            <div class="absolute -right-6 -bottom-6 opacity-15 text-white">
+                                <i class="fa-solid fa-plane-departure text-8xl"></i>
+                            </div>
+                            <p class="text-xs uppercase font-extrabold tracking-wider text-yellow-300">Paket Umrah Spesial TIBI Tours</p>
+                            <div class="flex items-baseline gap-2 mt-1">
+                                <span class="text-sm font-semibold text-gray-200">HANYA</span>
+                                <span class="text-3xl sm:text-4xl font-extrabold text-yellow-300 tracking-tight">Rp 31 JUTA</span>
+                                <span class="bg-yellow-400 text-tibi-red text-xs font-black px-2 py-0.5 rounded uppercase">ALL-IN</span>
+                            </div>
+                            <p class="text-xs text-red-100 mt-1">Ibadah nyaman dengan harga ramah di kantong, tanpa ada biaya tersembunyi!</p>
+                        </div>
+                    </div>
+
+                    <!-- CTA Button Hero -->
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="https://wa.me/6285283337181?text=Halo+Saya+Tertarik+Umrohnya" target="_blank" 
+                           class="w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white font-extrabold text-base sm:text-lg px-8 py-4 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center gap-3 animate-pulse-cta">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span>Konsultasi Gratis via WhatsApp Sekarang</span>
+                        </a>
+                    </div>
+
+                    <!-- Small Security Proofs -->
+                    <div class="pt-2 flex items-center justify-center lg:justify-start gap-6 text-xs text-gray-500 font-semibold">
+                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-green-600 text-sm"></i> Izin PPIU Terdaftar</span>
+                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-green-600 text-sm"></i> Kepastian Schedule</span>
+                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-hotel text-green-600 text-sm"></i> Hotel Dekat Masjid</span>
+                    </div>
+                </div>
+
+                <!-- Right Column: Visual Presentation / Poster Graphic Card -->
+                <div class="lg:col-span-5">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Main Visual Card -->
+                        <div class="bg-white p-3 sm:p-4 rounded-3xl shadow-2xl border border-gray-200/80 relative">
+                            <!-- Image Container -->
+                            <div class="relative rounded-2xl overflow-hidden aspect-[4/5] bg-gray-100">
+                                <img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&fit=crop&w=1000&q=80" 
+                                     alt="Jamaah Umroh di Depan Ka'bah" 
+                                     class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                                
+                                <!-- Overlay Card Banner -->
+                                <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 rounded-xl border border-yellow-300 shadow-lg">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-full bg-tibi-red text-yellow-300 flex items-center justify-center font-bold text-lg flex-shrink-0">
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-xs sm:text-sm font-bold text-gray-900">Pelayanan VIP & Profesional</h4>
+                                            <p class="text-[11px] text-gray-600">Pendampingan Penuh dari Keberangkatan hingga Pulang</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Floating Badge top right -->
+                            <div class="absolute -top-4 -right-4 bg-tibi-yellow text-tibi-red font-black text-xs uppercase px-4 py-2 rounded-full shadow-lg border-2 border-white transform rotate-3">
+                                <i class="fa-solid fa-fire text-tibi-red mr-1"></i> Kuota Terbatas!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: INTEREST (AIDA) -->
+    <section class="py-16 sm:py-20 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <span class="text-tibi-red font-bold text-xs uppercase tracking-widest px-3 py-1 bg-red-50 rounded-full border border-red-100 inline-block">
+                    Keresahan Calon Jamaah
+                </span>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 leading-tight">
+                    Pernahkah Anda Mengalami Kekhawatiran Ini Saat Merencanakan Umroh / Haji?
+                </h2>
+                <p class="text-sm sm:text-base text-gray-600">
+                    Kami memahami betul bahwa ibadah ke Tanah Suci adalah investasi spiritual terbesar dalam hidup Anda.
+                </p>
+            </div>
+
+            <!-- Pain Points Cards Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+                
+                <!-- Point 1 -->
+                <div class="bg-gradient-to-br from-red-50/50 to-white p-6 rounded-2xl border border-red-100 shadow-sm hover:shadow-md transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-red-100 text-tibi-red flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Takut Terjebak Travel Bodong?</h3>
+                    <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                        Maraknya janji manis tanpa kepastian legalitas resmi dan kejelasan jadwal terbang yang membingungkan.
+                    </p>
+                </div>
+
+                <!-- Point 2 -->
+                <div class="bg-gradient-to-br from-red-50/50 to-white p-6 rounded-2xl border border-red-100 shadow-sm hover:shadow-md transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-red-100 text-tibi-red flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-clipboard-list"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Pusing Memikirkan Persiapan?</h3>
+                    <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                        Rutinitas kerja yang padat membuat Anda tidak punya waktu mengurus dokumen dan logistik yang rumit.
+                    </p>
+                </div>
+
+                <!-- Point 3 -->
+                <div class="bg-gradient-to-br from-red-50/50 to-white p-6 rounded-2xl border border-red-100 shadow-sm hover:shadow-md transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-red-100 text-tibi-red flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-money-bill-wave"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Cemas Biaya Membengkak?</h3>
+                    <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                        Kekhawatiran akan <span class="italic font-semibold text-gray-800">hidden cost</span> (biaya tersembunyi) yang tiba-tiba ditagihkan di tengah jalan atau saat di lapangan.
+                    </p>
+                </div>
+
+                <!-- Point 4 -->
+                <div class="bg-gradient-to-br from-red-50/50 to-white p-6 rounded-2xl border border-red-100 shadow-sm hover:shadow-md transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-red-100 text-tibi-red flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Khawatir Pelayanan Buruk?</h3>
+                    <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                        Respon lambat dari pihak travel saat jamaah membutuhkan bantuan atau mengajukan kendala selama di Tanah Suci.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Transition / Reassurance Box (From Copywriting & Poster) -->
+            <div class="mt-12 bg-gradient-to-r from-amber-500/10 via-yellow-400/20 to-amber-500/10 border-2 border-yellow-400 p-6 sm:p-8 rounded-3xl text-center max-w-4xl mx-auto shadow-sm">
+                <div class="inline-flex items-center justify-center w-12 h-12 bg-tibi-red text-white rounded-full text-xl mb-3">
+                    <i class="fa-solid fa-heart text-yellow-300"></i>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-black text-gray-900 mb-2">
+                    TENANG, KAMI PUNYA SOLUSINYA!
+                </h3>
+                <p class="text-sm sm:text-base text-gray-700 leading-relaxed max-w-2xl mx-auto">
+                    Di <span class="font-bold text-tibi-red">TIBI Tours & Travel</span>, kami percaya bahwa perjalanan suci Anda seharusnya berfokus pada <span class="font-bold text-gray-900">kekhusyukan ibadah</span>, bukan kerumitan teknis. Biarkan kami yang mengurus seluruh operasional Anda.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 3: DESIRE (AIDA) -->
+    <section class="py-16 sm:py-24 bg-tibi-grayBg relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <span class="text-tibi-red font-bold text-xs uppercase tracking-widest px-3 py-1 bg-yellow-100 rounded-full border border-yellow-300 inline-block">
+                    Keunggulan Utama
+                </span>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 leading-tight">
+                    Mengapa Profesional & Keluarga Memilih TIBI Tours & Travel?
+                </h2>
+                <p class="text-sm sm:text-base text-gray-600">
+                    Standar tinggi untuk menjamin kekhusyukan dan kenyamanan ibadah Anda.
+                </p>
+            </div>
+
+            <!-- 4 Pillars Grid -->
+            <div class="grid md:grid-cols-2 gap-8 mt-12">
+                
+                <!-- Pillar 1 -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-card hover:shadow-xl transition duration-300 flex gap-5">
+                    <div class="w-14 h-14 rounded-2xl bg-tibi-red text-yellow-300 flex items-center justify-center text-2xl flex-shrink-0 shadow-md">
+                        <i class="fa-solid fa-tags"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">100% Layanan All-In & Tanpa Biaya Tersembunyi</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Dari visa, tiket pesawat PP, hotel berbintang dekat masjid, mutawwif berpengalaman, hingga konsumsi catering 3x sehari—semuanya sudah termasuk. Harga transparan sejak awal, tanpa kejutan biaya di belakang.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-card hover:shadow-xl transition duration-300 flex gap-5">
+                    <div class="w-14 h-14 rounded-2xl bg-tibi-red text-yellow-300 flex items-center justify-center text-2xl flex-shrink-0 shadow-md">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Pendampingan Ramah & Tanggap 24/7</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Tim lapangan kami yang profesional siap mendampingi dan menangani setiap kebutuhan atau kendala Anda secara cepat, santun, dan responsif dari keberangkatan hingga kepulangan.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-card hover:shadow-xl transition duration-300 flex gap-5">
+                    <div class="w-14 h-14 rounded-2xl bg-tibi-red text-yellow-300 flex items-center justify-center text-2xl flex-shrink-0 shadow-md">
+                        <i class="fa-solid fa-crown"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Fasilitas Kelas Atas & Fleksibel</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Pilihan paket eksklusif (<span class="font-bold text-tibi-red">Rp30 Juta – Rp300 Juta</span>) yang disesuaikan dengan kenyamanan dan kebutuhan Anda, mulai dari Paket Regular Premium hingga VIP Haji Khusus.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Pillar 4 -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-card hover:shadow-xl transition duration-300 flex gap-5">
+                    <div class="w-14 h-14 rounded-2xl bg-tibi-red text-yellow-300 flex items-center justify-center text-2xl flex-shrink-0 shadow-md">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Kepastian Legalitas & Jadwal Terjamin</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Izin Resmi PPIU No. U.149 Tahun 2021 atas nama PT. Turisina Buana. Pemberangkatan terjamin dengan kepastian tanggal penerbangan dan akomodasi terverifikasi.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Checklist Box (APA SAJA YANG SUDAH ANDA DAPATKAN?) -->
+            <div class="mt-16 bg-white p-8 sm:p-12 rounded-3xl border border-yellow-300 shadow-xl">
+                <div class="text-center mb-10">
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-gray-900">
+                        Apa Saja Yang Sudah Anda Dapatkan? <span class="text-tibi-red">(100% ALL-IN)</span>
+                    </h3>
+                    <p class="text-xs sm:text-sm text-gray-500 mt-1">Fasilitas lengkap tanpa ada tagihan tambahan di lokasi</p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <!-- Item 1 -->
+                    <div class="flex items-center gap-4 p-4 rounded-xl bg-amber-50/50 border border-amber-100">
+                        <div class="w-12 h-12 rounded-full bg-tibi-red text-white flex items-center justify-center text-lg flex-shrink-0 shadow">
+                            <i class="fa-solid fa-plane-departure"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm">Tiket Pesawat</h4>
+                            <p class="text-xs text-gray-600">Pulang-Pergi (PP) Resmi</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="flex items-center gap-4 p-4 rounded-xl bg-amber-50/50 border border-amber-100">
+                        <div class="w-12 h-12 rounded-full bg-tibi-red text-white flex items-center justify-center text-lg flex-shrink-0 shadow">
+                            <i class="fa-solid fa-passport"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm">Visa & Asuransi</h4>
+                            <p class="text-xs text-gray-600">Visa Umroh/Haji + Perjalanan</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="flex items-center gap-4 p-4 rounded-xl bg-amber-50/50 border border-amber-100">
+                        <div class="w-12 h-12 rounded-full bg-tibi-red text-white flex items-center justify-center text-lg flex-shrink-0 shadow">
+                            <i class="fa-solid fa-hotel"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm">Akomodasi Hotel</h4>
+                            <p class="text-xs text-gray-600">Nyaman & Dekat Masjid</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="flex items-center gap-4 p-4 rounded-xl bg-amber-50/50 border border-amber-100">
+                        <div class="w-12 h-12 rounded-full bg-tibi-red text-white flex items-center justify-center text-lg flex-shrink-0 shadow">
+                            <i class="fa-solid fa-utensils"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm">Makanan Berijazah</h4>
+                            <p class="text-xs text-gray-600">Catering Enak 3x Sehari</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="flex items-center gap-4 p-4 rounded-xl bg-amber-50/50 border border-amber-100">
+                        <div class="w-12 h-12 rounded-full bg-tibi-red text-white flex items-center justify-center text-lg flex-shrink-0 shadow">
+                            <i class="fa-solid fa-bus"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm">Transportasi AC</h4>
+                            <p class="text-xs text-gray-600">Bus Nyaman Full AC</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="flex items-center gap-4 p-4 rounded-xl bg-amber-50/50 border border-amber-100">
+                        <div class="w-12 h-12 rounded-full bg-tibi-red text-white flex items-center justify-center text-lg flex-shrink-0 shadow">
+                            <i class="fa-solid fa-person-praying"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm">Bimbingan Mutawwif</h4>
+                            <p class="text-xs text-gray-600">Pembimbing Berpengalaman</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 7 -->
+                    <div class="flex items-center gap-4 p-4 rounded-xl bg-amber-50/50 border border-amber-100">
+                        <div class="w-12 h-12 rounded-full bg-tibi-red text-white flex items-center justify-center text-lg flex-shrink-0 shadow">
+                            <i class="fa-solid fa-bottle-water"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm">Air Zamzam</h4>
+                            <p class="text-xs text-gray-600">Bawaan Asli dari Makkah</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 8 -->
+                    <div class="flex items-center gap-4 p-4 rounded-xl bg-amber-50/50 border border-amber-100">
+                        <div class="w-12 h-12 rounded-full bg-tibi-red text-white flex items-center justify-center text-lg flex-shrink-0 shadow">
+                            <i class="fa-solid fa-suitcase-rolling"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm">Perlengkapan Lengkap</h4>
+                            <p class="text-xs text-gray-600">Koper, Kain Ihram/Mukena, dll.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION: PAKET UMROH & HAJI EXCLUSIVE -->
+    <section class="py-16 sm:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <span class="text-tibi-red font-bold text-xs uppercase tracking-widest px-3 py-1 bg-red-50 rounded-full border border-red-100 inline-block">
+                    Pilihan Paket
+                </span>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900">
+                    Paket Ibadah Yang Disesuaikan Kebutuhan Anda
+                </h2>
+                <p class="text-sm sm:text-base text-gray-600">
+                    Mulai dari Paket Regulur Premium hingga VIP Haji Khusus dengan fleksibilitas terbaik.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mt-12">
+                
+                <!-- Package 1: Regular Premium -->
+                <div class="bg-white rounded-3xl border-2 border-gray-200 overflow-hidden shadow-lg hover:border-tibi-yellow transition duration-300 flex flex-col justify-between">
+                    <div class="p-6 sm:p-8">
+                        <div class="bg-yellow-100 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full w-max mb-4">
+                            Paling Populer
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Umroh Regular Premium</h3>
+                        <p class="text-xs text-gray-500 mt-1">Perjalanan 9 - 12 Hari</p>
+                        
+                        <div class="my-6">
+                            <span class="text-xs text-gray-500 block">Mulai Dari</span>
+                            <span class="text-3xl font-extrabold text-tibi-red">Rp 31 Juta</span>
+                            <span class="text-xs text-gray-500">/ Orang</span>
+                        </div>
+
+                        <ul class="space-y-3 text-xs sm:text-sm text-gray-600 border-t border-gray-100 pt-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-600"></i> Hotel Bintang 3 / 4 Dekat Masjid</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-600"></i> Direct Flight PP</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-600"></i> Catering Indonesia 3x/hari</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-600"></i> Handling & Perlengkapan Lengkap</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-600"></i> Mutawwif Berpengalaman</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-6 bg-gray-50 border-t border-gray-100">
+                        <a href="https://wa.me/6285283337181?text=Halo+Saya+Tertarik+Paket+Umroh+Regular+31jt" target="_blank"
+                           class="block text-center bg-gray-900 hover:bg-tibi-red text-white font-bold py-3 px-4 rounded-xl transition duration-300 text-sm">
+                            Pilih Paket Regular
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Package 2: VIP Executive (Featured) -->
+                <div class="bg-gradient-to-b from-amber-500/5 to-white rounded-3xl border-2 border-tibi-yellow overflow-hidden shadow-2xl relative flex flex-col justify-between transform lg:-translate-y-2">
+                    <div class="bg-tibi-yellow text-tibi-red text-xs font-black text-center py-2 uppercase tracking-wider">
+                        ★ Pilihan Favorit Keluarga & Eksekutif ★
+                    </div>
+                    
+                    <div class="p-6 sm:p-8">
+                        <h3 class="text-2xl font-black text-gray-900">Umroh VIP Executive</h3>
+                        <p class="text-xs text-gray-500 mt-1">Akomodasi Bintang 5 Depan Pelataran</p>
+                        
+                        <div class="my-6">
+                            <span class="text-xs text-gray-500 block">Mulai Dari</span>
+                            <span class="text-3xl font-extrabold text-tibi-red">Rp 45 Juta</span>
+                            <span class="text-xs text-gray-500">/ Orang</span>
+                        </div>
+
+                        <ul class="space-y-3 text-xs sm:text-sm text-gray-700 border-t border-gray-200/60 pt-6 font-medium">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-tibi-red"></i> Hotel Bintang 5 Pelataran Masjid</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-tibi-red"></i> Flight Business/Economy VIP</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-tibi-red"></i> Exclusive VIP Transport Bus</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-tibi-red"></i> Ziarah Khusus & Lounge VIP</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-tibi-red"></i> Privat Mutawwif untuk Keluarga</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-6 bg-yellow-50 border-t border-yellow-200/60">
+                        <a href="https://wa.me/6285283337181?text=Halo+Saya+Tertarik+Paket+Umroh+VIP+Executive" target="_blank"
+                           class="block text-center bg-tibi-red hover:bg-tibi-redDark text-white font-extrabold py-3.5 px-4 rounded-xl transition duration-300 shadow-md text-sm">
+                            Konsultasi Paket VIP
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Package 3: Haji Khusus -->
+                <div class="bg-white rounded-3xl border-2 border-gray-200 overflow-hidden shadow-lg hover:border-tibi-yellow transition duration-300 flex flex-col justify-between">
+                    <div class="p-6 sm:p-8">
+                        <div class="bg-amber-100 text-amber-900 text-xs font-bold px-3 py-1 rounded-full w-max mb-4">
+                            Sesuai Syariat & Legal Resmi
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Haji Khusus / VIP</h3>
+                        <p class="text-xs text-gray-500 mt-1">Masa Tunggu Lebih Cepat & Nyaman</p>
+                        
+                        <div class="my-6">
+                            <span class="text-xs text-gray-500 block">Rentang Investasi</span>
+                            <span class="text-2xl font-extrabold text-tibi-red">Rp 150Jt - 300Jt</span>
+                        </div>
+
+                        <ul class="space-y-3 text-xs sm:text-sm text-gray-600 border-t border-gray-100 pt-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-600"></i> Quota Resmi Kemenag RI</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-600"></i> Maktab VIP Arafah & Mina</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-600"></i> Pendampingan Ulama & Pembimbing</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-600"></i> Fasilitas Hotel Bintang 5</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-600"></i> Layanan Kesehatan Dedicated</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-6 bg-gray-50 border-t border-gray-100">
+                        <a href="https://wa.me/6285283337181?text=Halo+Saya+Tertarik+Konsultasi+Haji+Khusus" target="_blank"
+                           class="block text-center bg-gray-900 hover:bg-tibi-red text-white font-bold py-3 px-4 rounded-xl transition duration-300 text-sm">
+                            Konsultasi Haji Khusus
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: TESTIMONI JAMA'AH -->
+    <section class="py-16 sm:py-20 bg-tibi-grayBg relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-2xl mx-auto space-y-3">
+                <span class="text-tibi-red font-bold text-xs uppercase tracking-widest px-3 py-1 bg-yellow-100 rounded-full border border-yellow-300 inline-block">
+                    Kisah Nyata Jamaah
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900">
+                    Apa Kata Jamaah TIBI Tours?
+                </h2>
+                <p class="text-xs sm:text-sm text-gray-600">
+                    Kepercayaan dan kenyamanan jamaah adalah kebanggaan terbesar kami.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 mt-10">
+                
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-yellow-400 text-sm mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-700 italic leading-relaxed">
+                            "Pelayangannya sangat ramah dan profesional. Hotel benar-benar dekat Masjid, ibadah jadi jauh lebih nyaman tanpa lelah berjalan jauh."
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-yellow-400 text-tibi-red font-bold flex items-center justify-center text-sm">
+                            BA
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-gray-900">Bpk. Andi</h4>
+                            <p class="text-xs text-gray-500">Profesional, DKI Jakarta</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-yellow-400 text-sm mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-700 italic leading-relaxed">
+                            "Perjalanan umrah yang sangat berkesan bersama Tibi Tours. Guide/Mutawwif berpengalaman dan sangat sabar bimbing keluarga kami."
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-tibi-red text-white font-bold flex items-center justify-center text-sm">
+                            IS
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-gray-900">Ibu Sari</h4>
+                            <p class="text-xs text-gray-500">Ibu Rumah Tangga, Bandung</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-yellow-400 text-sm mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-700 italic leading-relaxed">
+                            "Semua terurus dengan baik, makan enak, transport nyaman. Tidak ada biaya siluman tersembunyi. Terima kasih Tibi Tours!"
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-yellow-400 text-tibi-red font-bold flex items-center justify-center text-sm">
+                            KD
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-gray-900">Kak Dimas</h4>
+                            <p class="text-xs text-gray-500">Karyawan Swasta, Bekasi</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: FAQ (Pertanyaan Sering Diajukan) -->
+    <section class="py-16 sm:py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center space-y-3 mb-10">
+                <span class="text-tibi-red font-bold text-xs uppercase tracking-widest px-3 py-1 bg-red-50 rounded-full border border-red-100 inline-block">
+                    Pertanyaan Umum
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900">
+                    FAQ (Pertanyaan Yang Sering Diajukan)
+                </h2>
+            </div>
+
+            <div class="space-y-4" id="faq-accordion">
+                
+                <!-- FAQ 1 -->
+                <div class="border border-gray-200 rounded-2xl overflow-hidden bg-tibi-grayBg">
+                    <button class="w-full text-left p-5 font-bold text-gray-900 flex justify-between items-center focus:outline-none" onclick="toggleFaq(1)">
+                        <span class="flex items-center gap-3 text-sm sm:text-base">
+                            <i class="fa-solid fa-circle-question text-tibi-red"></i>
+                            Apa saja syarat pendaftaran Umroh?
+                        </span>
+                        <i id="faq-icon-1" class="fa-solid fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-ans-1" class="hidden px-5 pb-5 text-xs sm:text-sm text-gray-600 border-t border-gray-200/60 pt-3">
+                        Syarat pendaftaran sangat mudah: Paspor (Masa berlaku min. 7 bulan), KTP, KK, Akta Lahir (jika membawa anak), serta Foto 4x6 dengan background putih. Tim kami siap membantu proses verifikasi.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="border border-gray-200 rounded-2xl overflow-hidden bg-tibi-grayBg">
+                    <button class="w-full text-left p-5 font-bold text-gray-900 flex justify-between items-center focus:outline-none" onclick="toggleFaq(2)">
+                        <span class="flex items-center gap-3 text-sm sm:text-base">
+                            <i class="fa-solid fa-circle-question text-tibi-red"></i>
+                            Apakah pembayaran bisa dicicil / tabungan?
+                        </span>
+                        <i id="faq-icon-2" class="fa-solid fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-ans-2" class="hidden px-5 pb-5 text-xs sm:text-sm text-gray-600 border-t border-gray-200/60 pt-3">
+                        Ya, kami menyediakan program cicilan & tabungan umroh transparan bekerja sama dengan lembaga keuangan syariah terpercaya sesuai ketentuan yang berlaku.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="border border-gray-200 rounded-2xl overflow-hidden bg-tibi-grayBg">
+                    <button class="w-full text-left p-5 font-bold text-gray-900 flex justify-between items-center focus:outline-none" onclick="toggleFaq(3)">
+                        <span class="flex items-center gap-3 text-sm sm:text-base">
+                            <i class="fa-solid fa-circle-question text-tibi-red"></i>
+                            Kapan jadwal keberangkatan terdekat?
+                        </span>
+                        <i id="faq-icon-3" class="fa-solid fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-ans-3" class="hidden px-5 pb-5 text-xs sm:text-sm text-gray-600 border-t border-gray-200/60 pt-3">
+                        Jadwal keberangkatan tersedia setiap bulan. Hubungi Customer Service kami via WhatsApp untuk mendapatkan jadwal paling up-to-date dan ketersediaan seat.
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 4: ACTION (AIDA) -->
+    <section class="py-16 sm:py-24 bg-gradient-to-br from-tibi-red via-red-700 to-tibi-redDark text-white relative overflow-hidden">
+        
+        <!-- Background Accents -->
+        <div class="absolute inset-0 bg-pattern opacity-10"></div>
+        <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-tibi-yellow rounded-full filter blur-3xl opacity-20"></div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
+            
+            <div class="inline-flex items-center gap-2 bg-yellow-400 text-tibi-red font-black text-xs uppercase px-4 py-1.5 rounded-full shadow-lg">
+                <i class="fa-solid fa-bell"></i> Kuota Terbatas Setiap Keberangkatan
+            </div>
+
+            <!-- Headline -->
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight max-w-3xl mx-auto">
+                Siap Memulai Perjalanan Ibadah yang Nyaman dan Khusyuk?
+            </h2>
+
+            <!-- Paragraph -->
+            <p class="text-base sm:text-lg text-red-100 max-w-2xl mx-auto leading-relaxed">
+                Mari konsultasikan kebutuhan ibadah Umroh & Haji Anda dan keluarga bersama Tim Konsultan TIBI Tours & Travel secara gratis.
+            </p>
+
+            <!-- Main CTA Button -->
+            <div class="pt-6">
+                <a href="https://wa.me/6285283337181?text=Halo+Saya+Tertarik+Umrohnya" target="_blank" 
+                   class="inline-flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white text-lg sm:text-xl font-extrabold px-10 py-5 rounded-2xl shadow-2xl hover:shadow-green-500/50 transition-all duration-300 transform hover:-translate-y-1 border-2 border-green-300">
+                    <i class="fa-brands fa-whatsapp text-3xl"></i>
+                    <span>👉 Konsultasi Gratis via WhatsApp Sekarang</span>
+                </a>
+            </div>
+
+            <p class="text-xs text-red-200 mt-4 italic font-medium">
+                Satu langkah menuju perjalanan ibadah yang aman, transparan, dan berkesan.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-tibi-dark text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                
+                <!-- Col 1: Brand Info -->
+                <div class="space-y-3 md:col-span-2">
+                    <div class="flex items-center gap-3">
+                        <div class="px-3 py-1 bg-[#FFE600] rounded-full">
+                            <span class="font-bold italic text-tibi-red text-lg">tibi tours</span>
+                        </div>
+                        <span class="text-xs text-gray-300 font-semibold">PT. Turisina Buana</span>
+                    </div>
+                    <p class="text-xs text-gray-400 leading-relaxed max-w-md">
+                        Izin PPIU No. U.149 Tahun 2021. Biro perjalanan umroh dan haji terpercaya yang mengutamakan kekhusyukan, keamanan, dan kenyamanan jamaah dengan layanan 100% transparan.
+                    </p>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h4 class="text-white text-sm font-bold mb-3">Kontak & Alamat</h4>
+                    <ul class="text-xs space-y-2">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-tibi-yellow"></i> 0811-1905-0098 / 0852-8333-7181</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-envelope text-tibi-yellow"></i> info@tibitour.com</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-globe text-tibi-yellow"></i> www.tibitour.com</li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Social Media -->
+                <div>
+                    <h4 class="text-white text-sm font-bold mb-3">Ikuti Kami</h4>
+                    <div class="flex gap-3">
+                        <a href="https://instagram.com/tibitours.official" target="_blank" class="w-8 h-8 rounded-full bg-gray-800 hover:bg-tibi-red text-white flex items-center justify-center transition">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" target="_blank" class="w-8 h-8 rounded-full bg-gray-800 hover:bg-tibi-red text-white flex items-center justify-center transition">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" target="_blank" class="w-8 h-8 rounded-full bg-gray-800 hover:bg-tibi-red text-white flex items-center justify-center transition">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-800 pt-6 text-center text-xs text-gray-500">
+                &copy; 2026 TIBI Tours & Travel (PT. Turisina Buana). All Rights Reserved. Amanah, Nyaman, Menuju Baitullah.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile CTA Bar -->
+    <div class="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 z-50 shadow-2xl flex items-center justify-between gap-3">
+        <div class="text-left pl-2">
+            <span class="text-[10px] text-gray-500 uppercase font-bold block">Paket Umrah Spesial</span>
+            <span class="text-base font-extrabold text-tibi-red leading-none">Rp 31 Juta <span class="text-[10px] bg-yellow-300 text-tibi-red px-1 rounded">ALL-IN</span></span>
+        </div>
+        <a href="https://wa.me/6285283337181?text=Halo+Saya+Tertarik+Umrohnya" target="_blank" 
+           class="bg-green-600 hover:bg-green-700 text-white font-extrabold text-xs sm:text-sm px-5 py-2.5 rounded-xl shadow-lg flex items-center gap-2">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>Konsultasi WA</span>
+        </a>
+    </div>
+
+    <script>
+        // Toggle FAQ items function
+        function toggleFaq(id) {
+            const answer = document.getElementById(`faq-ans-${id}`);
+            const icon = document.getElementById(`faq-icon-${id}`);
+            
+            if (answer.classList.contains('hidden')) {
+                answer.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                answer.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+    </script>
+</body>
+</html>
